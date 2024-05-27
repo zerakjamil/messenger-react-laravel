@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import { Link, usePage } from '@inertiajs/react';
 import ApplicationLogo from '@/Components/ApplicationLogo';
 import Dropdown from '@/Components/Dropdown';
 import NavLink from '@/Components/NavLink';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
 
-export default function AuthenticatedLayout({ header, children }) {
+export default function Authenticated({ header, children }) {
     const page = usePage();
     const user = page.props.auth.user;
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
